@@ -32,6 +32,8 @@ public class RythemGame extends JFrame {
 	private JButton quitButton= new JButton(quitButtonBasicImage);
 	private int mouseX , mouseY;
 	
+	
+	
 	public RythemGame() {
 		setUndecorated(true);
 		setTitle("Dynamic Beat_1");
