@@ -260,8 +260,9 @@ public class RythemGame extends JFrame {
 
 
 	}
+	
 	public void screenDraw(Graphics g) {
-
+		
 		g.drawImage(background, 0, 0, null);
 		if(isMainScreen) {
 			g.drawImage(selectedImage,340,100,null);
@@ -273,11 +274,15 @@ public class RythemGame extends JFrame {
 	public void selectTrack(int nowSelected) {
 		if(selectedMusic != null)
 			selectedMusic.close();
+		
 		titleImage = new ImageIcon(Main.class.getResource("../images/" + trackList.get(nowSelected).getTitleImage())).getImage();
+	
 		selectedImage = new ImageIcon(Main.class.getResource("../images/" + trackList.get(nowSelected).getStartImage())).getImage();
 		selectedMusic = new Music(trackList.get(nowSelected).getStartMusic(), true);
 		selectedMusic.start();
 	}
+	
+
 	public void selectLeft() {
 		if(nowselected==0)
 			nowselected = trackList.size()-1;	
